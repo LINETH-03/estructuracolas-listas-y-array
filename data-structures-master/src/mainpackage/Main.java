@@ -1,4 +1,4 @@
-package mainpackage;
+/*package mainpackage;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -9,11 +9,11 @@ import com.umg.data.structures.Queue.LinkedListBasedQueue;
 public class Main {
 	
 	
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		
 		
-		//basadoenarrays();
-		basadoenlistas();
+		basadoenarrays();
+		//basadoenlistas();
 		 
 	        
 	    }
@@ -101,7 +101,7 @@ public class Main {
  
                 switch (opcion) {
                     case 1:
-                    	System.out.println("	1-Encolar");
+                    	System.out.println(" Ingrese elemento a Encolar");
                     	tipoLista.enqueue(sn.nextLine());
 						sn.nextLine();
                         break;
@@ -142,4 +142,4 @@ public class Main {
 	
 
 
-}
+}*/

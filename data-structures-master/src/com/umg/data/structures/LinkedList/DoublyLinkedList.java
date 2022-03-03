@@ -1,8 +1,10 @@
-/**
+ /**
  * Data-Structures-In-Java
  * DoublyLinkedList.java
  */
 package com.umg.data.structures.LinkedList;
+
+import com.umg.data.structures.LinkedList.DoublyLinkedList.Node;
 
 /**
  * Implementation of Doubly linked list 
@@ -189,7 +191,8 @@ public class DoublyLinkedList<E> {
 	 */
 	public Node<E> searchByIndex(int index) {
 		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
+			//throw new IndexOutOfBoundsException("Invalid index passed while searching for a value");
+			return null;
 		} 
 		/* Validation passed, let's search for value using the index */
 		Node<E> temp = head;
@@ -211,20 +214,31 @@ public class DoublyLinkedList<E> {
 	 */
 	public Node<E> searchByValue(E value) { 
 		/* Traverse through each node until this value is found */
-		Node<E> temp = head;
+		/*Node<E> temp = head;
 		while (null != temp.next && temp.item != value) {
 			temp = temp.next;
 		}
 		if (temp.item == value) {
 			return temp;
 		}
+		return null;*/
+		if(null!=head) {
+			Node<E> temp = head;
+			while (null != temp.next && false == temp.item.equals(value)) {
+				temp = temp.next;
+			}
+			if (temp.item.equals(value)) {
+				return temp;
+			}
+		}	
 		return null;
 	}
 
 	/**
 	 * Delete's the element present at head node
+	 * @param delet 
 	 */
-	public void deleteFromHead() {
+	public void deleteFromHead( ) {
 		/* If list is empty, return */
 		if (null == head) { 
 			return;
